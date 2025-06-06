@@ -1742,3 +1742,39 @@ img {
     min-height: 300px !important; /* можете поставити будь-яке зручне вам значення */
   }
 }
+/* =====================================================
+   ПЕРЕКРИВАЄМО СТИЛІ ДЛЯ ПЕРШОГО БАНЕРА (клас u-image-1)
+   ===================================================== */
+
+/* 1) Перемикаємо background-size з contain на cover,
+   щоб фон “закривав” весь блок, а не прагнув умістити всю картинку */
+.u-section-1 .u-image-1 {
+  background-size: cover !important;
+  background-position: center center !important;
+}
+
+/* 2) Зменьшуємо мінімальну висоту на різних медіа-шляхах,
+   бо оригінально у Nicepage прописано min-height: 962px */
+@media (max-width: 1199px) {
+  .u-section-1 .u-image-1 {
+    min-height: 600px !important; /* для екранів до 1199px ширини */
+  }
+}
+
+@media (max-width: 991px) {
+  .u-section-1 .u-image-1 {
+    min-height: 500px !important; /* для екранів до 991px ширини */
+  }
+}
+
+@media (max-width: 767px) {
+  .u-section-1 .u-image-1 {
+    min-height: 400px !important; /* для екранів до 767px ширини */
+  }
+}
+
+@media (max-width: 575px) {
+  .u-section-1 .u-image-1 {
+    min-height: 300px !important; /* для екранів до 575px ширини (телефон) */
+  }
+}
