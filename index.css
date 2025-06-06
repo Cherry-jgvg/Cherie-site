@@ -1724,3 +1724,21 @@ img {
   background-size: cover !important;
   background-position: center center !important;
 }
+/* ================================================
+   ПЕРЕКРИТИ background-size: contain → cover
+   ДЛЯ ПЕРШОГО БАНЕРА (клас u-image-1 у секції 1)
+   ================================================ */
+.u-section-1 .u-image-1 {
+  background-size: cover !important;
+  background-position: center center !important;
+}
+
+/* ================================================
+   ДОДАТКОВО: прибрати “занадто велику висоту” на мобільних
+   (щоб блок не займав купу місця, якщо картинка вже обрана методом cover)
+   ================================================ */
+@media (max-width: 575px) {
+  .u-section-1 .u-image-1 {
+    min-height: 300px !important; /* можете поставити будь-яке зручне вам значення */
+  }
+}
