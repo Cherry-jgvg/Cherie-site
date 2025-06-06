@@ -1694,3 +1694,33 @@
 .u-section-8 .u-btn-1 {
   margin-bottom: 60px;
 }
+/* ================================================
+   ВСІ <img> робимо адаптивними:
+   не ширше за контейнер і зберігають пропорції
+   ================================================ */
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* ================================================
+   Усі блоки з класом .u-image (фон-зображення від Nicepage)
+   — завжди cover + центр + ширина 100%
+   ================================================ */
+.u-image {
+  width: 100% !important;
+  height: auto !important;
+  background-size: cover !important;
+  background-position: center center !important;
+}
+
+/* Якщо саме перший банер має клас u-image-1, додатково:
+   (забезпечить, що фон-картинка саме цього блоку розтягується)
+   ================================================ */
+.u-image-1 {
+  width: 100% !important;
+  height: auto !important;
+  background-size: cover !important;
+  background-position: center center !important;
+}
